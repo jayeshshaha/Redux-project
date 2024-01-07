@@ -15,9 +15,12 @@ const Products = () => {
     };
     fetchProducts();
   }, []);
+
   const handleAdd = (product) => {
+    // store it in redux store
     dispatch(add(product));
   };
+
   return (
     <div className="productsWrapper">
       {products.map((product) => (
