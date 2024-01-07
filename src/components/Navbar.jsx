@@ -3,12 +3,6 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 
-const linkStyling = {
-  margin: "20px",
-  textDecoration: "none",
-  color: "black",
-};
-
 const Navbar = () => {
   const items = useSelector((state)=> state.cart)
   return (
@@ -20,15 +14,15 @@ const Navbar = () => {
       <span className="logo" style={{color:'blue'}}>REDUX Store.</span>
       <div>
         <Link
-          style={linkStyling}
-          className="nav-link"
+          
+          className="navLink"
           to={"/"}
         >
           Home
         </Link>
         <Link 
-        style={linkStyling}
-        className="nav-link" 
+
+        className="navLink" 
         to={"/cart"}
         >
           Cart
